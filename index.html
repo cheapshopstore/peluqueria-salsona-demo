@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Peluquería Salsona, Zaragoza</title>
+<meta name="description" content="Peluquería Salsona en Zaragoza. Horario, teléfono para pedir cita y cómo llegar.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Figtree:wght@400;500;600&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main>
+  <header>
+    <h1>Peluquería Salsona</h1>
+    <p class="lead">Tu peluquería de barrio en Zaragoza. Pide cita por teléfono y te atendemos con calma.</p>
+    <div class="polaroids" aria-hidden="true">
+      <figure class="pol" style="--r:-6deg"><div class="ph">tu foto aquí</div><figcaption>El salón</figcaption></figure>
+      <figure class="pol" style="--r:3deg"><div class="ph">tu foto aquí</div><figcaption>Un corte</figcaption></figure>
+      <figure class="pol" style="--r:-3deg"><div class="ph">tu foto aquí</div><figcaption>Un peinado</figcaption></figure>
+    </div>
+    <span class="rating">4,9 en Google, 108 opiniones</span>
+  </header>
+
+  <section aria-labelledby="horario">
+    <h2 id="horario">Horario</h2>
+    <div class="card">
+      <div id="status" class="status" role="status"><span class="dot"></span><span id="status-text">Comprobando horario…</span></div>
+      <table>
+        <tbody id="hours">
+          <tr data-d="1"><td>Lunes</td><td>10:00 a 20:00</td></tr>
+          <tr data-d="2"><td>Martes</td><td>10:00 a 20:00</td></tr>
+          <tr data-d="3"><td>Miércoles</td><td>10:00 a 20:00</td></tr>
+          <tr data-d="4"><td>Jueves</td><td>10:00 a 20:00</td></tr>
+          <tr data-d="5"><td>Viernes</td><td>10:00 a 20:00</td></tr>
+          <tr data-d="6"><td>Sábado</td><td>9:00 a 14:00</td></tr>
+          <tr data-d="0"><td>Domingo</td><td>Cerrado</td></tr>
+        </tbody>
+      </table>
+      <p class="note">De lunes a viernes no cerramos al mediodía. Cita previa por teléfono.</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="contacto">
+    <h2 id="contacto">Dónde estamos</h2>
+    <div class="two">
+      <div class="card">
+        <p style="margin:0 0 .4rem;font-weight:600">Dirección</p>
+        <address>Calle Concepción Saiz de Otero<br>Zaragoza</address>
+        <a class="btn ghost" href="https://maps.app.goo.gl/K226iTFKcVVw6fQUA" target="_blank" rel="noopener">Cómo llegar</a>
+      </div>
+      <div class="card">
+        <p style="margin:0 0 .4rem;font-weight:600">Pide tu cita</p>
+        <a class="btn ghost" href="tel:+34976740015" aria-label="Llamar al 976 74 00 15">976 74 00 15</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>© Peluquería Salsona</footer>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

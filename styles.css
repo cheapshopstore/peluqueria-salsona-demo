@@ -1,0 +1,70 @@
+:root{
+  --bg:#f6eef5; --card:#ffffff; --ink:#26142f; --muted:#6b5a73;
+  --accent:#d6336c; --accent-ink:#ffffff; --sun:#f2c14e; --line:#e4d4e2;
+  --ok:#1f7a4d; --closed:#9b2c4a;
+  color-scheme:light;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#1b1022; --card:#27172f; --ink:#f6eaf3; --muted:#bba8c4;
+    --accent:#ff5c93; --accent-ink:#2a0f1c; --sun:#f2c14e; --line:#3d2a47;
+    --ok:#5fd39b; --closed:#ff8aa9;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#1b1022; --card:#27172f; --ink:#f6eaf3; --muted:#bba8c4;
+  --accent:#ff5c93; --accent-ink:#2a0f1c; --sun:#f2c14e; --line:#3d2a47;
+  --ok:#5fd39b; --closed:#ff8aa9;
+  color-scheme:dark;
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Figtree",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:1.0625rem;line-height:1.55}
+main{max-width:46rem;margin:0 auto;padding:2.5rem 1.25rem 3rem}
+h1,h2{font-family:"Bricolage Grotesque","Trebuchet MS",system-ui,sans-serif;line-height:1.05;margin:0}
+h1{font-size:clamp(2.8rem,11vw,5rem);font-weight:800;letter-spacing:-.02em}
+h2{font-size:1.5rem;font-weight:700;margin-bottom:1rem}
+.lead{max-width:34rem;color:var(--muted);margin:1.1rem 0 0}
+.rating{display:inline-block;margin-top:1.25rem;padding:.35rem .8rem;border-radius:2rem;background:var(--sun);color:#26142f;font-weight:600;font-size:.95rem}
+.polaroids{display:flex;justify-content:center;align-items:flex-start;margin:2.25rem 0 0;padding:.5rem .5rem .75rem}
+.pol{flex:none;margin:0 0 0 -1.4rem;width:clamp(6.5rem,30vw,11rem);padding:.55rem .55rem 0;background:#fff;box-shadow:0 .5rem 1.2rem rgba(38,20,47,.28);transform:rotate(var(--r,0deg))}
+.pol:first-child{margin-left:0}
+.pol:nth-child(2){z-index:2;margin-top:.9rem}
+.pol:nth-child(3){z-index:1}
+.pol .ph{aspect-ratio:1/1;display:flex;align-items:flex-end;justify-content:center;padding-bottom:.5rem;font-size:.75rem;color:rgba(38,20,47,.55)}
+.pol:nth-child(1) .ph{background:linear-gradient(145deg,#f7c6d9,#d6a8e8)}
+.pol:nth-child(2) .ph{background:linear-gradient(145deg,#ffe3a3,#f7b3a1)}
+.pol:nth-child(3) .ph{background:linear-gradient(145deg,#bfe3ee,#c9b6f0)}
+.pol figcaption{font-family:"Caveat","Bradley Hand","Segoe Script",cursive;font-size:1.3rem;line-height:1;color:#3a2745;text-align:center;padding:.9rem 0 1rem}
+.actions{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.75rem}
+.btn{display:inline-block;padding:.9rem 1.4rem;border-radius:.7rem;font-weight:600;text-decoration:none;border:2px solid var(--accent)}
+.btn.primary{background:var(--accent);color:var(--accent-ink)}
+.btn.ghost{color:var(--ink);border-color:var(--ink)}
+.btn:focus-visible{outline:3px solid var(--sun);outline-offset:3px}
+section{margin-top:3rem}
+.card{background:var(--card);border:1px solid var(--line);border-radius:1rem;padding:1.5rem}
+.status{display:flex;align-items:center;gap:.6rem;margin-bottom:1.1rem;font-weight:600}
+.dot{width:.8rem;height:.8rem;border-radius:50%;background:var(--muted)}
+.status.open .dot{background:var(--ok)}
+.status.open{color:var(--ok)}
+.status.closed .dot{background:var(--closed)}
+.status.closed{color:var(--closed)}
+table{width:100%;border-collapse:collapse}
+td{padding:.6rem 0;border-top:1px solid var(--line)}
+tr:first-child td{border-top:0}
+td:last-child{text-align:right}
+tr.today td{font-weight:700}
+tr.today td:first-child::before{content:"";display:inline-block;width:.5rem;height:.5rem;border-radius:50%;background:var(--accent);margin-right:.6rem}
+tr.today td:first-child::after{content:" (hoy)";font-weight:400;color:var(--muted)}
+.note{color:var(--muted);font-size:.95rem;margin:1rem 0 0}
+address{font-style:normal}
+footer{margin-top:3rem;color:var(--muted);font-size:.9rem}
+.two{display:grid;gap:1rem}
+.two .card{display:flex;flex-direction:column;gap:.5rem}
+.two .btn{margin-top:auto;text-align:center;font-size:1.1rem;padding:1rem 1.25rem}
+.two address{margin-bottom:.75rem}
+@media (min-width:28rem){.two{grid-template-columns:1fr 1fr}}
